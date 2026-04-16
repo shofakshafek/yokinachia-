@@ -5,68 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yokinachia - Nachia JKT48 Fanbase</title>
     <style>
-        :root {
-            --primary: #ff69b4;
-            --secondary: #fce4ec;
-            --dark: #333;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #fffafb;
-            color: var(--dark);
-            scroll-behavior: smooth;
-        }
-        nav {
-            background: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover { color: var(--primary); }
-        
+        :root { --primary: #ff69b4; --secondary: #fce4ec; --dark: #333; }
+        body { font-family: sans-serif; margin: 0; background-color: #fffafb; color: var(--dark); scroll-behavior: smooth; }
+        nav { background: white; padding: 1rem; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: center; gap: 20px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: bold; }
         section { padding: 80px 20px; max-width: 1000px; margin: auto; text-align: center; }
         
         /* Beranda */
         #beranda { 
-            height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center;
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('media yang dibutuhkan/nachia1openpage.jpg');
-            background-size: cover;
-            background-position: center;
+            min-height: 100vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('media yang dibutuhkan/nachia1openpage.jpg');
+            background-size: cover; background-position: center;
         }
-        .hero-img { border-radius: 50%; width: 200px; height: 200px; border: 5px solid var(--primary); margin-bottom: 20px; animation: bounce 2s infinite; }
-        
-        /* Donasi */
-        .donasi-container { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0; }
-        .pay-card { border: 2px dashed #ccc; padding: 15px; border-radius: 10px; }
-        form input { padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid #ddd; width: 80%; }
-        button { background: var(--primary); color: white; border: none; padding: 10px 25px; border-radius: 20px; cursor: pointer; transition: 0.3s; }
-        button:hover { transform: scale(1.05); }
+        .logo-fanbase { width: 150px; border-radius: 50%; border: 3px solid var(--primary); margin-bottom: 15px; }
+        .video-container { width: 100%; max-width: 600px; margin-top: 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        /* Biodata */
-        .bio-info { text-align: left; background: var(--secondary); padding: 30px; border-radius: 20px; line-height: 1.8; }
-        .sosmed-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-        .sosmed-list a { background: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; color: var(--primary); font-weight: bold; border: 1px solid var(--primary); }
+        /* Gallery */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .gallery img { width: 100%; border-radius: 10px; transition: 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
 
-        /* Animasi */
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        /* Donasi & Bio */
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-top: 20px; }
+        .sosmed-list a { display: inline-block; margin: 5px; padding: 10px 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 20px; }
     </style>
 </head>
 <body>
@@ -78,66 +40,46 @@
     </nav>
 
     <section id="beranda">
-        <img src="media yang dibutuhkan/logofanbase.jpg" alt="Logo" class="hero-img">
+        <img src="media yang dibutuhkan/logofanbase.jpg" alt="Logo Fanbase" class="logo-fanbase">
         <h1>Selamat Datang di Yokinachia</h1>
-        <p>Fanbase Resmi untuk Nachia JKT48</p>
-        </section>
+        
+        <div class="video-container">
+            <video width="100%" controls>
+                <source src="media yang dibutuhkan/video.mp4" type="video/mp4">
+                Browser kamu tidak mendukung video.
+            </video>
+        </div>
+        <p>Fanbase Resmi Nina Tutachia (Nachia) JKT48</p>
+    </section>
 
     <section id="donasi">
         <h2>Dukungan / Donasi</h2>
-        <div class="donasi-container">
-            <p>Salurkan dukunganmu ke: <strong>082261195070 (DANA)</strong></p>
-            <div class="payment-grid">
-                <div class="pay-card">BRI<br>[Slot Kosong]</div>
-                <div class="pay-card">MANDIRI<br>[Slot Kosong]</div>
-                <div class="pay-card">BNI<br>[Slot Kosong]</div>
-                <div class="pay-card">QR Code<br>[Slot Kosong]</div>
+        <div class="card">
+            <img src="media yang dibutuhkan/nachiadonasi.jpg" style="width: 100%; max-width: 400px; border-radius: 10px;" alt="Donasi">
+            <p>DANA: <strong>082261195070</strong></p>
             </div>
-            
-            <h3>Form Konfirmasi Donasi</h3>
-            <form onsubmit="alert('Terima kasih telah berdonasi!'); return false;">
-                <input type="text" placeholder="Nama Anda" required><br>
-                <input type="number" placeholder="Jumlah Donasi" required><br>
-                <button type="submit">Kirim Konfirmasi</button>
-            </form>
-
-            <div style="margin-top: 30px;">
-                <h3>Leaderboard Donatur Tertinggi</h3>
-                <p>1. [Nama Donatur] - Rp 100.000</p>
-                <p>2. [Nama Donatur] - Rp 50.000</p>
-            </div>
-        </div>
     </section>
 
     <section id="biodata">
         <h2>Biodata Nachia</h2>
-        <div class="bio-info">
-            <p><strong>Nama Lengkap:</strong> Nina Tutachia Browning Chapman</p>
-            <p><strong>Nama Panggung:</strong> Nachia</p>
-            <p><strong>Tanggal Lahir:</strong> 16 Oktober 2009</p>
-            <p><strong>Asal Kota:</strong> Bali</p>
-            <p><strong>Horoskop:</strong> Libra</p>
-            <p><strong>Tinggi Badan:</strong> 162cm</p>
-            <p><strong>Golongan Darah:</strong> O</p>
-            <p><strong>Status:</strong> Member Generasi 12 JKT48 (18 November 2023 - Sekarang)</p>
+        <div class="card" style="text-align: left;">
+            <p><strong>Nama:</strong> Nina Tutachia Browning Chapman</p>
             <p><strong>Jikoshoukai:</strong> "Si panda unyu yang selalu ceria! Aku Nachia, bikin kamu bahagia!"</p>
+            </div>
+
+        <h3>Foto Nachia</h3>
+        <div class="gallery">
+            <img src="media yang dibutuhkan/nachia2.jpg" alt="Nachia">
+            <img src="media yang dibutuhkan/nachia3.jpg" alt="Nachia">
+            <img src="media yang dibutuhkan/nachia4.jpg" alt="Nachia">
         </div>
 
-        <h3>Media Sosial & Live Platform</h3>
-        <div class="sosmed-list">
-            <a href="https://www.instagram.com/jkt48.nachia.t" target="_blank">Instagram</a>
-            <a href="https://www.threads.com/@jkt48.nachia.t" target="_blank">Threads</a>
-            <a href="https://x.com/Nachia_JKT48" target="_blank">Twitter/X</a>
-            <a href="https://www.tiktok.com/@jkt48.nachia" target="_blank">TikTok</a>
-            <a href="https://www.showroom-live.com/r/JKT48_Nachia" target="_blank">Showroom</a>
-            <a href="https://idn-app.idn.link/s/profile-7cj09t" target="_blank">IDN Live</a>
+        <div class="sosmed-list" style="margin-top: 30px;">
+            <a href="https://www.instagram.com/jkt48.nachia.t">Instagram</a>
+            <a href="https://x.com/Nachia_JKT48">Twitter/X</a>
+            <a href="https://www.tiktok.com/@jkt48.nachia">TikTok</a>
         </div>
     </section>
 
-    <footer style="padding: 20px; text-align: center; color: #888;">
-        &copy; 2024 Yokinachia. All rights reserved.
-    </footer>
-
 </body>
 </html>
-
